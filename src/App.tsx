@@ -273,7 +273,7 @@ function Footer({ onNav }: { onNav: (section: string) => void }) {
                   </li>
                 ))}
                 <li>
-                  <a href="/film.html" className="footer-link">Fragrance Film</a>
+                  <a href={`${import.meta.env.BASE_URL}film.html`} className="footer-link">Fragrance Film</a>
                 </li>
               </ul>
             </div>

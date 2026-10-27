@@ -67,7 +67,7 @@ export default function Navigation({ onSearchToggle, onSectionNav }: NavigationP
               </li>
             ))}
             <li>
-              <a className="nav-link nav-film-link" href="/film.html" id="nav-film-link">
+              <a className="nav-link nav-film-link" href={`${import.meta.env.BASE_URL}film.html`} id="nav-film-link">
                 Fragrance Film
                 <span className="nav-link-underline" aria-hidden="true" />
               </a>
@@ -175,7 +175,7 @@ export default function Navigation({ onSearchToggle, onSectionNav }: NavigationP
               >
                 <a
                   className="mobile-nav-link"
-                  href="/film.html"
+                  href={`${import.meta.env.BASE_URL}film.html`}
                   onClick={() => setMobileOpen(false)}
                   id="mobile-nav-film-link"
                 >

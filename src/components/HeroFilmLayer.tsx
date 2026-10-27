@@ -10,7 +10,7 @@ interface HeroFilmLayerProps {
 }
 
 export default function HeroFilmLayer({ mouseX, mouseY, onClick }: HeroFilmLayerProps) {
-  const texture = useVideoTexture('/perfume-bottle-floating.mp4', {
+  const texture = useVideoTexture(`${import.meta.env.BASE_URL}perfume-bottle-floating.mp4`, {
     muted: true,
     loop: true,
     start: true,

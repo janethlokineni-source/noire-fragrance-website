@@ -3,7 +3,7 @@ import type { Product } from './types';
 export const PRODUCTS: Product[] = [
   {
     id: 'noire-oud',
-    image: '/bottle-noire-oud.jpg',
+    image: `${import.meta.env.BASE_URL}bottle-noire-oud.jpg`,
     name: 'NOIRÉ OUD',
     price: 4999,
     priceFormatted: '₹4,999',
@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'velvet-rose',
-    image: '/bottle-velvet-rose.jpg',
+    image: `${import.meta.env.BASE_URL}bottle-velvet-rose.jpg`,
     name: 'VELVET ROSE',
     price: 3499,
     priceFormatted: '₹3,499',
@@ -46,7 +46,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'golden-amber',
-    image: '/bottle-golden-amber.jpg',
+    image: `${import.meta.env.BASE_URL}bottle-golden-amber.jpg`,
     name: 'GOLDEN AMBER',
     price: 4299,
     priceFormatted: '₹4,299',
@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'midnight-elixir',
-    image: '/bottle-midnight-elixir.jpg',
+    image: `${import.meta.env.BASE_URL}bottle-midnight-elixir.jpg`,
     name: 'MIDNIGHT ELIXIR',
     price: 5499,
     priceFormatted: '₹5,499',
@@ -89,7 +89,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'aqua-prestige',
-    image: '/bottle-aqua-prestige.jpg',
+    image: `${import.meta.env.BASE_URL}bottle-aqua-prestige.jpg`,
     name: 'AQUA PRESTIGE',
     price: 2999,
     priceFormatted: '₹2,999',
@@ -110,7 +110,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'imperial-bloom',
-    image: '/bottle-imperial-bloom.jpg',
+    image: `${import.meta.env.BASE_URL}bottle-imperial-bloom.jpg`,
     name: 'IMPERIAL BLOOM',
     price: 3999,
     priceFormatted: '₹3,999',

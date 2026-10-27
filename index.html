@@ -13,9 +13,110 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #070707;
+        color: #F5F0E8;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      #root:empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #070707;
+      }
+      .initial-loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        color: #C8A96B;
+        text-align: center;
+      }
+      .initial-logo {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 2.5rem;
+        letter-spacing: 0.35em;
+        font-weight: 400;
+        color: #C8A96B;
+      }
+      .initial-spinner {
+        width: 32px;
+        height: 32px;
+        border: 2px solid rgba(200, 169, 107, 0.2);
+        border-top-color: #C8A96B;
+        border-radius: 50%;
+        animation: initSpin 0.9s linear infinite;
+      }
+      @keyframes initSpin {
+        to { transform: rotate(360deg); }
+      }
+      .protocol-banner {
+        max-width: 520px;
+        margin: 2rem;
+        padding: 2rem;
+        border: 1px solid rgba(200, 169, 107, 0.3);
+        background: #111111;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      }
+      .protocol-banner h2 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.75rem;
+        letter-spacing: 0.2em;
+        margin-bottom: 1rem;
+        color: #C8A96B;
+      }
+      .protocol-banner p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #A6A6A6;
+        margin-bottom: 1.25rem;
+      }
+      .protocol-banner code {
+        display: block;
+        padding: 0.75rem 1rem;
+        background: #070707;
+        border: 1px solid rgba(200, 169, 107, 0.2);
+        color: #E8D5A5;
+        font-family: monospace;
+        font-size: 0.95rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="initial-placeholder" class="initial-loader">
+        <div class="initial-logo">NOIRÉ</div>
+        <div class="initial-spinner"></div>
+      </div>
+    </div>
+    <script>
+      // If user opened index.html directly from disk via file:// protocol
+      if (window.location.protocol === 'file:') {
+        var placeholder = document.getElementById('initial-placeholder');
+        if (placeholder) {
+          placeholder.innerHTML = [
+            '<div class="protocol-banner">',
+            '  <h2>NOIRÉ</h2>',
+            '  <p>Modern 3D web applications with Three.js and ES modules require a local web server to run securely.</p>',
+            '  <p>To view the website, run this command in your project terminal:</p>',
+            '  <code>npm run dev</code>',
+            '  <p>Then open: <strong style="color: #C8A96B;">http://localhost:8080</strong></p>',
+            '</div>'
+          ].join('');
+        }
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

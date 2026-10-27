@@ -608,7 +608,7 @@ export default function HeroScene({ onExploreClick, onDiscoverClick }: HeroScene
           {/* Base Bottle Body (Real Photograph of NOIRÉ OUD) */}
           <div className={`bottle-image-frame ${customizerOpen ? 'customizing' : 'cinematic'}`}>
             <img
-              src="/bottle-noire-oud.jpg"
+              src={`${import.meta.env.BASE_URL}bottle-noire-oud.jpg`}
               alt="NOIRÉ OUD Ultra-Luxury Fragrance Flacon"
               className="bottle-real-img"
               draggable={false}
@@ -661,7 +661,7 @@ export default function HeroScene({ onExploreClick, onDiscoverClick }: HeroScene
               }}
             >
               <img
-                src="/hero-cap.png"
+                src={`${import.meta.env.BASE_URL}hero-cap.png`}
                 alt="NOIRÉ 24K Gold Cap"
                 className="bottle-cap-img"
                 draggable={false}
